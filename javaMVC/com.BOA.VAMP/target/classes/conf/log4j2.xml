@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration  status="INFO" monitorInterval="5">
+<Appenders>
+<Console name="consoleAppender" target="SYSTEM_OUT">
+  <PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n"/>
+ </Console>
+<File name="fileAppender" fileName="c:\logs\myapps\learning.log" append="true">
+  <PatternLayout pattern="%t %-5p %c{2} - %m%n"/>
+</File>
+</Appenders>
+
+<Loggers>
+<Root level="INFO">
+  <AppenderRef ref="consoleAppender"/>
+  <AppenderRef ref="fileAppender"/>
+</Root>
+</Loggers>  
+</configuration>
